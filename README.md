@@ -10,8 +10,8 @@ Make sure you have node installed in your machine. Then, run the following comma
 
 ## How does Redux work ?
 - In Redux we have **one central data store** for the components.
-- Components need to **subscribe** to the redux Store. After that, when there is any change in the state, the store notifies the **subscribed** components.
-- Components can **NEVER** directly change the data in the Store.
+- Components need to **subscribe** to the redux store. After that, when there is any change in the state, the store notifies the subscribed components.
+- Components can **NEVER** directly change the data in the store.
 - For updating store data, we need **reducer functions**.
 - Components **dispatch** actions that a reducer should perform.
 - These actions are then forwarded to the reducer.
