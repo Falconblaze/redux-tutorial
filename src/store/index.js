@@ -1,16 +1,13 @@
-// import { createStore } from "redux";
-import { configureStore } from "@reduxjs/toolkit";
+import { createStore, combineReducers } from "redux";
 
 import counterReducer from "./counter";
 import authenticationReducer from "./authentication";
 
-// create a central store with the reducer
-// const store = createStore(counterReducer);
-const store = configureStore({
-  reducer: {
-    counter: counterReducer,
-    authentication: authenticationReducer,
-  },
+const reducers = combineReducers({
+  counter: counterReducer,
+  authentication: authenticationReducer,
 });
+
+const store = createStore(reducers);
 
 export default store;
